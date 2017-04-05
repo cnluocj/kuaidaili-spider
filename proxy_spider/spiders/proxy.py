@@ -8,14 +8,13 @@ from proxy_spider.items import Proxy
 class ProxySpider(Spider):
     name = 'proxy'
     allowed_domains = ['kuaidaili.com']
-    start_urls = [
-        'http://www.kuaidaili.com/'
-    ]
+
+    start_urls = map(lambda x: 'http://www.kuaidaili.com/proxylist/%s/' % str(x), [x for x in range(1, 11)])
 
     headers = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'Accept-Encoding': 'gzip, deflate, sdch',
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36',
         'Accept-Language': 'en-US,en;q=0.8,zh-TW;q=0.6,zh;q=0.4',
         # 'Connection': 'keep-alive',
         'Referer': 'http://www.kuaidaili.com/',
@@ -24,9 +23,9 @@ class ProxySpider(Spider):
     }
 
     cookies = {
-        '_ydclearance': '05802e42ea361c37251d6c30-6ed2-4c1e-ae06-69243190dc41-1491035318',
+        '_ydclearance': 'a94d67873d1068e5dba97a21-6209-4c27-abc5-2cb1188accca-1491388572',
         'channelid': '0',
-        'sid': '1491028837567397',
+        'sid': '1491381609671425',
         # 'Hm_lvt_7ed65b1cc4b810e9fd37959c9bb51b31': '1490974747',
         # 'Hm_lpvt_7ed65b1cc4b810e9fd37959c9bb51b31': '1490976307',
         # '_ga': 'GA1.2.1602496365.1490974747',

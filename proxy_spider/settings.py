@@ -64,9 +64,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'proxy_spider.pipelines.ProxySpiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'proxy_spider.pipelines.ProxySpiderPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,4 +90,5 @@ DOWNLOADER_MIDDLEWARES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 
-HTTPERROR_ALLOWED_CODES= [521]
+# 扫描器判断 timeout 时间
+SCAN_TIMEOUT = 0.5
